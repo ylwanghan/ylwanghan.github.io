@@ -20,7 +20,7 @@ sidebar-avatar: /img/avatar-by.jpg      # use absolute URL, seeing it's used in 
 RSS: false
 zhihu_username:     ylwanghan
 github_username:    ylwanghan
-jianshu_username:   e71990ada2fd
+jianshu_username:   b90a3c3c400d
 
 
 
@@ -96,16 +96,16 @@ service-worker: true
 # Friends
 friends: [
     {
-        title: "WY",
-        href: "http://zhengwuyang.com"
+        title: "LeetCode",
+        href: "https://leetcode-cn.com/"
     },{
-        title: "简书·BY",
-        href: "http://www.jianshu.com/u/e71990ada2fd"
+        title: "简书·YL",
+        href: "http://www.jianshu.com/u/eb90a3c3c400d"
     },{
-        title: "Apple",
-        href: "https://apple.com"
+        title: "JS Bin",
+        href: "https://jsbin.com/"
     },{
-        title: "Apple Developer",
-        href: "https://developer.apple.com/"
+        title: "MDN Web 文档",
+        href: "https://developer.mozilla.org"
     }
 ]
