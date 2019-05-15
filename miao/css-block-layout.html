@@ -38,7 +38,7 @@
             background-color: pink;
             box-sizing: border-box;
             text-align: center;
-            list-style-type: none;
+            
             line-height: 34px;      
             margin-bottom: 15px;      
         }
@@ -55,11 +55,16 @@
             margin-top: -220px;
         }
         div.link {
+            list-style-type: none;
             width: 600px;
             margin: auto;
         }
         div.link > div {
             border-bottom: 1px dotted;
+            margin-bottom: -1px dotted;
+        }
+        div.link > div:last-child {
+            border-bottom: none;
         }
         footer {
             margin: 0px;
