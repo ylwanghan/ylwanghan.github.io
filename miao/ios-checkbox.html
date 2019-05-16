@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .ios-button {
+            cursor: pointer;           
+            -webkit-appearance: none;
+            position: relative;
+            width: 54px;
+            height: 32px;
+            background: rgb(221, 221, 221);
+            border-radius: 16px;
+            border: 1px solid rgb(221, 221, 221);   
+            outline: 0;         
+            box-sizing: border-box;
+        }
+        .ios-button:checked {
+            border-color: rgb(110, 221, 94);
+            background-color: rgb(110, 221, 94);
+        }
+        .ios-button:before,
+        .ios-button:after {
+            content: " ";
+            position: absolute;
+            background: rgb(221, 221, 221);
+            top: 1.5px;
+            left: 1.5px;
+            height: 27px;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+        .ios-button:before {
+            width: 49px;
+            background-color: #fdfdfd;
+        }
+        .ios-button:after {
+            width: 27px;
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+        .ios-button:checked:before {
+            transform: scale(0);         
+        }
+        .ios-button:checked:after {
+            transform: translateX(22px);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" class="ios-button">
+    
+</body>
+
+</html>
