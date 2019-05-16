@@ -6,25 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-        .ios-button {
+    <style>       
+        input {
+            display: none;
+        }
+        label {
             cursor: pointer;           
             -webkit-appearance: none;
             position: relative;
+            display: block;
             width: 54px;
             height: 32px;
             background: rgb(221, 221, 221);
             border-radius: 16px;
             border: 1px solid rgb(221, 221, 221);   
             outline: 0;         
-            box-sizing: border-box;
+            box-sizing: border-box;            
         }
-        .ios-button:checked {
+        .ios-button:checked + label {
             border-color: rgb(110, 221, 94);
             background-color: rgb(110, 221, 94);
         }
-        .ios-button:before,
-        .ios-button:after {
+        label:before,
+        label:after {
             content: " ";
             position: absolute;
             background: rgb(221, 221, 221);
@@ -34,27 +38,27 @@
             border-radius: 15px;
             transition: transform 0.3s;
         }
-        .ios-button:before {
+        label:before {
             width: 49px;
             background-color: #fdfdfd;
         }
-        .ios-button:after {
+        label:after {
             width: 27px;
             background-color: white;
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
         }
-        .ios-button:checked:before {
+        .ios-button:checked + label:before {
             transform: scale(0);         
         }
-        .ios-button:checked:after {
+        .ios-button:checked + label:after {
             transform: translateX(22px);
         }
     </style>
 </head>
 
 <body>
-    <input type="checkbox" class="ios-button">
-    
+    <input type="checkbox" class="ios-button" id="ck">
+    <label for="ck"></label>
 </body>
 
 </html>
