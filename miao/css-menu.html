@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .muti-drop-list a {
+            display: block;
+            padding: 2px 10px;
+            margin: 2px;
+            width: auto;
+            background-color: white;
+            color: black;
+            border: 1px solid;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color: grey;
+            color: azure;
+        }
+
+        .muti-drop-list ul {
+            float: left;
+        }
+
+        .muti-drop-list li {
+            float: left;
+            list-style-type: none;
+            position: relative;
+        }
+
+        .muti-drop-list li ul {
+            display: none;
+            position: absolute;
+            left: 0px;
+            top: 100%;
+        }
+
+        .muti-drop-list li ul li {
+            float: none;
+        }
+        .muti-drop-list li:hover > ul {
+            display: block;
+        }
+
+        .muti-drop-list li ul li ul {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="muti-drop-list">
+        <ul>
+            <li>
+                <a href="#">手机</a>
+                <ul>
+                    <li><a href="#">小米8 SE</a></li>
+                    <li><a href="#">小米9 SE</a></li>
+                    <li><a href="#">小米MIX 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">电视</a></li>
+            <li>
+                <a href="#">笔记本</a>
+                <ul>
+                    <li><a href="#">小米笔记本 15.6</a></li>
+                    <li><a href="#">小米笔记本 13.3</a></li>
+                    <li><a href="#">小米笔记本 12.5</a></li>
+                </ul>
+            </li>
+            <li><a href="#">家电</a></li>
+            <li><a href="#">出行</a></li>
+            <li><a href="#">智能</a></li>
+            <li>
+                <a href="#">生活啊</a>
+                <ul>
+                    <li><a href="#">双肩包</a></li>
+                    <li><a href="#">旅行箱</a></li>
+                    <li>
+                        <a href="#">充电器</a>
+                        <ul>
+                            <li><a href="#">8000mA</a></li>
+                            <li><a href="#">10000mA</a></li>
+                            <li><a href="#">20000mA</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">家具</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
