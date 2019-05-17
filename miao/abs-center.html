@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;             
+        }
+        .parent {
+            width: 200px;
+            height: 200px;
+            border: 2px solid;
+            margin: 50px;
+            position: relative;
+        }
+        div[class*="box"] {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+        /** absolute垂直居中 **/
+        .box1 {           
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;          
+        }
+        /** inline-block垂直居中 **/
+        .center2 {                 
+            text-align: center;
+            line-height: 192px;
+        }
+        .box2 {            
+            display: inline-block;
+            vertical-align: middle;             
+        }
+    </style>
+</head>
+<body>
+    <div class="parent center1"><div class="box1">老子垂直居中</div></div>
+    <div class="parent center2"><div class="box2">老子垂直居中</div></div>
+</body>
+</html>
