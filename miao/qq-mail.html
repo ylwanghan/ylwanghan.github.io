@@ -10,11 +10,12 @@
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            box-sizing: border-box;              
         }
         html, body {
             width: 100%;
             height: 100%;
+            font-size: 0;
         }
         .top {
             height: 85px;
@@ -27,7 +28,7 @@
             list-style-type: none;
         }
         .left {
-            display: inline-block;           
+            display: inline-block;  
             width: 200px;
             height: calc(100% - 85px);
             background-color: rgb(137, 181, 223);
@@ -48,9 +49,9 @@
             background-color: rgb(137, 181, 223);
         }
         .main {
-            display: inline-block;
-            padding-left: 10px;
-            float: right;
+            display: inline-block;           
+            vertical-align: top; 
+            padding-left: 10px;          
             background-color: rgb(139, 245, 251);
             border: 5px rgb(9, 106, 224) solid;
             width: calc(100% - 200px);
@@ -58,6 +59,10 @@
         }
         a {
             text-decoration: none;
+            font-size: 15px;
+        }
+        p {
+            font-size: 15px;
         }
     </style>
 </head>
