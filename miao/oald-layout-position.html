@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;            
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            border: 5px solid burlywood;
+            position: relative;
+        }
+        .left {
+            width: 20%;
+            height: 100%;
+            border: 5px solid blueviolet;
+        }
+        .main {
+            position: absolute;
+            top: 0;
+            left: 20%;
+            width: 40%;
+            height: 100%;
+            border: 5px solid gray;
+        }
+        .main > div:first-child {           
+            height: 30%;
+            border: 5px solid plum;
+        }
+        .main > div:last-child {
+            height: 70%;
+            border: 5px solid darkcyan;
+        }
+        .right-one {
+            position: absolute;
+            top: 0;
+            left: 60%;
+            width: 20%;
+            height: 100%;
+            border: 5px solid goldenrod;
+        }
+        .right-two {
+            position: absolute;
+            top: 0;
+            left: 80%;
+            width: 20%;
+            height: 100%;
+            border: 5px solid palegreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="main">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="right-one"></div>
+    <div class="right-two"></div>
+</body>
+</html>
