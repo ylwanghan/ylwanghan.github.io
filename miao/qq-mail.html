@@ -9,8 +9,11 @@
     <style>
         * {
             margin: 0;
-            padding: 0;
+            padding: 0;            
+        }
+        html, body {
             width: 100%;
+            height: 100%;
         }
         .top {
             height: 85px;
@@ -26,7 +29,7 @@
             box-sizing: border-box;
             padding-left: 10px;
             width: 20%;
-            height: 700px;
+            height: calc(100% - 85px);
             background-color: rgb(137, 181, 223);
             border: 5px rgb(9, 106, 224) solid;
             border-right: none;
@@ -41,7 +44,7 @@
             background-color: rgb(139, 245, 251);
             border: 5px rgb(9, 106, 224) solid;
             width: 80%;
-            height: 700px;
+            height: calc(100% - 85px);
         }        
         a {
             text-decoration: none;
