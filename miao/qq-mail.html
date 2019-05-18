@@ -9,7 +9,8 @@
     <style>
         * {
             margin: 0;
-            padding: 0;            
+            padding: 0;
+            box-sizing: border-box;
         }
         html, body {
             width: 100%;
@@ -19,57 +20,71 @@
             height: 85px;
             color: black;
             background-color: rgb(200, 220, 255);
-            box-sizing: border-box;
+            border: 5px rgb(9, 106, 224) solid;
+            border-bottom: none;
         }
         ul {
             list-style-type: none;
-        }        
+        }
         .left {
-            display: inline-block;
-            box-sizing: border-box;
-            padding-left: 10px;
-            width: 20%;
+            display: inline-block;           
+            width: 200px;
             height: calc(100% - 85px);
             background-color: rgb(137, 181, 223);
             border: 5px rgb(9, 106, 224) solid;
             border-right: none;
-            margin: 0;
+        }
+        .left > div {
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .left > div:nth-child(1) {
+            height: 20%;
+            background-color: rgb(137, 181, 223);
+            border-bottom: 5px rgb(9, 106, 224) solid;
+        }
+        .left > div:nth-child(2) {
+            height: 80%;
+            background-color: rgb(137, 181, 223);
         }
         .main {
-            margin: 0;     
-            float: right;           
-            box-sizing: border-box;
-            vertical-align: top;
+            display: inline-block;
             padding-left: 10px;
+            float: right;
             background-color: rgb(139, 245, 251);
             border: 5px rgb(9, 106, 224) solid;
-            width: 80%;
+            width: calc(100% - 200px);
             height: calc(100% - 85px);
-        }        
+        }
         a {
             text-decoration: none;
         }
     </style>
 </head>
-
 <body>
     <div class="top">
         <p>Mail QQ邮箱</p>
     </div>
     <div class="left">
-        <ul>
-            <li><a href="">写信</a></li>
-            <li><a href="">收信</a></li>
-            <li><a href="">通讯录</a></li>
-            <li><a href="">收件箱</a></li>
-            <li><a href="">星标邮件</a></li>
-            <li><a href="">群邮件</a></li>
-            <li><a href="">草稿箱</a></li>
-            <li><a href="">已发送</a></li>
-            <li><a href="">已删除</a></li>
-            <li><a href="">垃圾箱</a></li>
-            <li><a href="">其他邮箱</a></li>
-        </ul>
+        <div>
+            <ul>
+                <li><a href="">写信</a></li>
+                <li><a href="">收信</a></li>
+                <li><a href="">通讯录</a></li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><a href="">收件箱</a></li>
+                <li><a href="">星标邮件</a></li>
+                <li><a href="">群邮件</a></li>
+                <li><a href="">草稿箱</a></li>
+                <li><a href="">已发送</a></li>
+                <li><a href="">已删除</a></li>
+                <li><a href="">垃圾箱</a></li>
+                <li><a href="">其他邮箱</a></li>
+            </ul>
+        </div>
     </div>
     <div class="main">
         <p>夜深了，王哈哈。</p>
