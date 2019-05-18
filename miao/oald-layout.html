@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            border: 5px solid rgb(113, 112, 113);
+        }
+
+        .left {
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            background-color: rgb(49, 221, 212);
+            border: 5px solid rgb(248, 3, 248);
+        }
+
+        .main {
+            display: inline-block;
+            width: 40%;
+            height: 100%;
+            background-color: rgb(35, 235, 8);
+            border: 5px solid rgb(13, 27, 218);
+        }
+
+        .main > div:first-child {
+            height: 30%;
+            border: 5px solid green;
+        }
+
+        .main > div:last-child {
+            height: 70%;
+            border: 5px solid orange;
+        }
+
+        .right-one {
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            background-color: rgb(49, 221, 212);
+            border: 5px solid rgb(248, 3, 248);
+        }
+
+        .right-two {
+            display: inline-block;
+            width: 20%;
+            height: 100%;
+            background-color: rgb(35, 235, 8);
+            border: 5px solid rgb(13, 27, 218);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="left"></div>
+    <div class="main">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="right-one"></div>
+    <div class="right-two"></div>
+</body>
+
+</html>
