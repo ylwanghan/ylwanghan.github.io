@@ -10,7 +10,20 @@
         * {
             box-sizing: border-box;
         }       
-        .box {
+        .grid {
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgb(0, 0, 0, 0.3);
+            margin: 50px auto;
+            position: relative;
+        }
+        /* 使用display:table table-column table-row table-cell实现九宫格*/
+        .box1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -80px;
             display: table;
             border: 2.5px solid blue;
             background-color: rgb(240, 240, 240);
@@ -36,12 +49,41 @@
         .row>div:hover {
             border: 5px solid red;
         }
+        /* 使用td tr col 优先级 实现九宫格*/
+        .box2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -80px; 
+                      
+        }
+        .box2 table {
+            background-color: rgb(240, 240, 240);
+            color: green;           
+            border-collapse: collapse;
+            text-align: center;  
+        }
+        .box2 tr {
+            border: 5px solid blue;
+        }
+        .box2 col {
+            border: 5px solid blue;
+        }
+        .box2 td {
+            width: 50px;
+            height: 50px;
+        }
+        .box2 td:hover {
+            border: 5px solid red;
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <div class="grid">
-        <div class="box">
+        <div class="box1">
             <div class="col"></div>
             <div class="col"></div>
             <div class="col"></div>
@@ -61,6 +103,32 @@
                 <div>9</div>
             </div>
         </div>        
+    </div>
+    <div class="grid">
+        <div class="box2">
+            <table>
+                <col>
+                <col>
+                <col>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
