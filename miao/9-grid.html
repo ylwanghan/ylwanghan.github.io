@@ -9,7 +9,8 @@
     <style>
         * {
             box-sizing: border-box;
-        }       
+        }  
+
         .grid {
             width: 200px;
             height: 200px;
@@ -17,6 +18,7 @@
             margin: 50px auto;
             position: relative;
         }
+
         /* 使用display:table table-column table-row table-cell实现九宫格*/
         .box1 {
             position: absolute;
@@ -31,24 +33,29 @@
             border-collapse: collapse;
             text-align: center;            
         }
+
         div.col {
             display: table-column;
             border: 5px solid blue;
         }
+
         div.row {
             cursor: pointer;
             display: table-row;
             border: 5px solid blue;
         }
+        
         .row div {
             display: table-cell;
             width: 50px;
             height: 50px;
             vertical-align: middle;
         }
+
         .row>div:hover {
             border: 5px solid red;
-        }
+        }        
+
         /* 使用td tr col 优先级 实现九宫格*/
         .box2 {
             position: absolute;
@@ -58,25 +65,66 @@
             margin-left: -80px; 
                       
         }
+
         .box2 table {
             background-color: rgb(240, 240, 240);
             color: green;           
             border-collapse: collapse;
             text-align: center;  
         }
+
         .box2 tr {
             border: 5px solid blue;
         }
+
         .box2 col {
             border: 5px solid blue;
         }
+
         .box2 td {
             width: 50px;
             height: 50px;
         }
+
         .box2 td:hover {
             border: 5px solid red;
             cursor: pointer;
+        }
+        /* 使用line-height实现订阅博客 */
+        .blog1 {
+            width: 198px;
+            height: 150px;
+            background-color:aquamarine;
+            border-bottom: 2px solid red;
+            margin: 25px 0;
+        }
+
+        .blog1 span {
+            cursor: pointer;      
+            line-height: 280px;      
+            transition: 1s;
+        }
+
+        .blog1 span:hover {
+            font-size: 48px;        
+            line-height: 230px;    
+        }
+
+        /* 使用display:table-cell实现订阅博客 */
+        .blog2 {
+            width: 198px;
+            height: 150px;
+            background-color:aquamarine;
+            border-bottom: 2px solid red;
+            display: table-cell;
+            vertical-align: bottom;
+            cursor: pointer;                        
+            transition: 1s;
+            margin: 25px 0;
+        }        
+
+        .blog2:hover {
+            font-size: 48px;         
         }
     </style>
 </head>
@@ -130,6 +178,13 @@
             </table>
         </div>
     </div>
+    <div class="grid">
+        <div class="blog1">
+            <span>订阅博客</span>
+        </div>        
+    </div>
+    <div class="grid">
+        <div class="blog2">订阅博客</div></div>
 </body>
 
 </html>
