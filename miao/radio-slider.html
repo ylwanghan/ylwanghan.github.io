@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>13</title>
+	<title>radio-slider</title>
 	<style type="text/css">
 		* {
 			padding: 0;
@@ -31,11 +31,12 @@
 			margin: 2.5px;
 			background-color: rgb(135, 135, 135);
 			cursor: pointer;
-        }        
+		}        
+		.slider > section label:hover {
+			background-color: rgb(245, 251, 254); 
+		}
         .slider > div > label {
-            cursor: pointer;
-        }
-		.slider > div > label:nth-child(1) {
+			cursor: pointer;
 			position: absolute;
 			width: 40px;
 			height: 68px;
@@ -44,19 +45,13 @@
 			margin: auto;
 			line-height: 68px;
             text-align: center;
+        }
+		.slider > div > label:nth-child(1) {			
             background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
             background-position: -84px;            
         }
-        .slider > div > label:nth-child(2) {
-            position: absolute;
-			width: 40px;
-			height: 68px;
-			top: 0;
-            bottom: 0;
-            left: 1186px;
-			margin: auto;
-			line-height: 68px;
-            text-align: center;            
+        .slider > div > label:nth-child(2) {            
+            left: 1186px;			           
             background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
             background-position: -126px;
         }
@@ -67,8 +62,7 @@
 		.slider > div > label:nth-child(2):hover {
 			background-image: url(https://i1.mifile.cn/f/i/2014/cn/icon/icon-slides.png);
             background-position: -43px;   
-		}
-		
+		}		
 		.slider img {
 			width: 1226px;
 			height: 460px;
@@ -80,19 +74,18 @@
 			width: 100%;
 			height: 100%;
 			opacity: 0;
-			transition:  .3s;
 		}
 		.slider input:checked + * + * + * + * + div {
 			opacity: 1;
 			z-index: 2;
+			transition: 1s;
 		}
 		input:nth-child(1):checked ~ section > label:nth-child(1),
 		input:nth-child(2):checked ~ section > label:nth-child(2),
 		input:nth-child(3):checked ~ section > label:nth-child(3),
 		input:nth-child(4):checked ~ section > label:nth-child(4),
 		input:nth-child(5):checked ~ section > label:nth-child(5) {
-            background-color: rgb(245, 251, 254);       
-            border: 2px solid rgb(171，171, 171);		    
+            background-color: rgb(245, 251, 254);      
         }      
 
 	</style>
