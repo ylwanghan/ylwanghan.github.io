@@ -9,7 +9,7 @@
     <style>
         * {
             box-sizing: border-box;
-        }  
+        }
 
         .grid {
             width: 200px;
@@ -29,9 +29,9 @@
             display: table;
             border: 2.5px solid blue;
             background-color: rgb(240, 240, 240);
-            color: green;           
+            color: green;
             border-collapse: collapse;
-            text-align: center;            
+            text-align: center;
         }
 
         div.col {
@@ -44,7 +44,7 @@
             display: table-row;
             border: 5px solid blue;
         }
-        
+
         .row div {
             display: table-cell;
             width: 50px;
@@ -54,23 +54,23 @@
 
         .row>div:hover {
             border: 5px solid red;
-        }        
+        }
 
-        /* 使用td tr col 优先级 实现九宫格*/
+        /* 使用td tr col 优先级 实现九宫格 */
         .box2 {
             position: absolute;
             top: 50%;
             left: 50%;
             margin-top: -80px;
-            margin-left: -80px; 
-                      
+            margin-left: -80px;
+
         }
 
         .box2 table {
             background-color: rgb(240, 240, 240);
-            color: green;           
+            color: green;
             border-collapse: collapse;
-            text-align: center;  
+            text-align: center;
         }
 
         .box2 tr {
@@ -90,41 +90,134 @@
             border: 5px solid red;
             cursor: pointer;
         }
+
+        /* 使用float实现九宫格 */
+        .box3 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -80px;
+            width: 170px;
+        }
+
+        .box3>span {
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            float: left;
+            margin-bottom: -5px;
+            margin-right: -5px;
+            background-color: rgb(240, 240, 240);
+            color: green;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .box3>span:hover {
+            border-color: red;
+            z-index: 1;
+        }
+
+        /* 使用inline-block实现九宫格 */
+        .box4 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -80px;
+            margin-left: -80px;
+            width: 170px;
+            height: 170px;
+            font-size: 0;
+        }
+        .box4 > span {
+            display: inline-block;
+            font-size: initial;
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            margin: 0 -5px -5px 0;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgb(240, 240, 240);
+            color: green;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .box4 > span:hover {
+            border-color: red;
+            z-index: 1;
+        }
+
+        /* 使用语义化标签和兼容ie6实现九宫格 */
+        ol {
+            list-style-type: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            background-color: rgb(240, 240, 240);
+            color: green;
+            width: 50px;
+            height: 50px;
+            border: 5px solid blue;
+            float: left;
+            margin: 0 -5px -5px 0;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+        }
+
+        a:hover {
+            border-color: red;
+            z-index: 1;
+        }
+
         /* 使用line-height实现订阅博客 */
         .blog1 {
             width: 198px;
             height: 150px;
-            background-color:aquamarine;
+            background-color: aquamarine;
             border-bottom: 2px solid red;
             margin: 25px 0;
         }
 
         .blog1 span {
-            cursor: pointer;      
-            line-height: 280px;      
+            cursor: pointer;
+            line-height: 280px;
             transition: 1s;
         }
 
         .blog1 span:hover {
-            font-size: 48px;        
-            line-height: 230px;    
+            font-size: 48px;
+            line-height: 230px;
         }
 
         /* 使用display:table-cell实现订阅博客 */
         .blog2 {
             width: 198px;
             height: 150px;
-            background-color:aquamarine;
+            background-color: aquamarine;
             border-bottom: 2px solid red;
             display: table-cell;
             vertical-align: bottom;
-            cursor: pointer;                        
+            cursor: pointer;
             transition: 1s;
             margin: 25px 0;
-        }        
+        }
 
         .blog2:hover {
-            font-size: 48px;         
+            font-size: 48px;
         }
     </style>
 </head>
@@ -150,7 +243,7 @@
                 <div>8</div>
                 <div>9</div>
             </div>
-        </div>        
+        </div>
     </div>
     <div class="grid">
         <div class="box2">
@@ -179,12 +272,53 @@
         </div>
     </div>
     <div class="grid">
-        <div class="blog1">
-            <span>订阅博客</span>
-        </div>        
+        <div class="box3">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>
+        </div>
     </div>
     <div class="grid">
-        <div class="blog2">订阅博客</div></div>
+        <div class="box4">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>5</span>
+            <span>6</span>
+            <span>7</span>
+            <span>8</span>
+            <span>9</span>           
+        </div>
+    </div>
+    <div class="grid">
+        <ol>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li><a href="">6</a></li>
+            <li><a href="">7</a></li>
+            <li><a href="">8</a></li>
+            <li><a href="">9</a></li>
+        </ol>
+    </div>
+
+    <div class="grid">
+        <div class="blog1">
+            <span>订阅博客</span>
+        </div>
+    </div>
+    <div class="grid">
+        <div class="blog2">订阅博客</div>
+    </div>
 </body>
 
 </html>
