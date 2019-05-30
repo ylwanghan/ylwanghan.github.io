@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            min-width: 780px;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            border: 5px solid rgb(113, 112, 113);
+            display: flex;
+        }
+
+        .left {
+            flex-grow: 1;
+            background-color: rgb(49, 221, 212);
+            border: 5px solid rgb(248, 3, 248);
+        }
+
+        .main {
+            min-width: 600px;
+            background-color: rgb(35, 235, 8);
+            border: 5px solid rgb(13, 27, 218);
+            display: flex;
+            flex-flow: column;
+        }
+
+        .main > div:first-child {
+            max-height: 100px;
+            flex-grow: 1;
+            overflow-y: auto;            
+            border: 5px solid green;
+        }
+
+        .main > div:last-child {            
+            flex-grow: 5;
+            overflow: hidden;
+            border: 5px solid orange;
+        }
+
+        .right-one {
+            flex-grow: 1;
+            background-color: rgb(49, 221, 212);
+            border: 5px solid rgb(248, 3, 248);
+        }
+
+        .right-two {
+            flex-grow: 1;
+            background-color: rgb(26, 49, 23);
+            border: 5px solid rgb(13, 27, 218);
+        }
+    </style>
+</head>
+<body>
+    <div class="left">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+
+        </p>
+    </div>
+    <div class="main">
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                it minima tempora, nam, officia eveniet tenetur facere
+                sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+                Doloribus consequuntur quibusdam porro optio.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                it minima tempora, nam, officia eveniet tenetur facere
+                sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+                Doloribus consequuntur quibusdam porro optio.
+
+            </p>
+        </div>
+        <div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                it minima tempora, nam, officia eveniet tenetur facere
+                sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+                Doloribus consequuntur quibusdam porro optio.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                it minima tempora, nam, officia eveniet tenetur facere
+                sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+                Doloribus consequuntur quibusdam porro optio.
+
+            </p>
+        </div>
+    </div>
+    <div class="right-one">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+
+        </p>
+    </div>
+    <div class="right-two">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            it minima tempora, nam, officia eveniet tenetur facere
+            sapiente possimus quia magnam provident eum aliquid, ratione exercitationem.
+            Doloribus consequuntur quibusdam porro optio.
+
+        </p>
+    </div>
+</body>
+
+</html>
