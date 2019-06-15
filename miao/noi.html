@@ -562,3 +562,135 @@
   console.log(sum);  
 
 </script>
+
+<script type="x" id="ch0105/11">
+  var n = Number(prompt("请输入整数个数"));  
+  var array = [];
+  var one = 0;
+  var five = 0;
+  var ten = 0;
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    array[i] = Number(prompt("请输入第" + (i + 1) + "个数"));
+    if (array[i] == 1) {
+      one++;
+    }
+    if (array[i] == 5) {
+      five++;
+    }
+    if (array[i] == 10) {
+      ten++;
+    } 
+  }
+  console.log(one);
+  console.log(five);
+  console.log(ten);  
+
+</script>
+
+<script type="x" id="ch0105/12">
+  var n = Number(prompt("请输入整数个数"));  
+  var m = Number(prompt("请输入需要匹配的数字"));
+  var array = [];
+  var two = 0;
+  for(var i = 0; i < n; i++) {
+    array[i] = Number(prompt("请输入第" + (i + 1) + "个数"));
+    if (array[i] == 2) {
+      two++;
+    }
+  }
+  console.log(two);
+
+</script>
+
+<script type="x" id="ch0105/13">
+  var a = Number(prompt("请输入整数数值"));  
+  var n = Number(prompt("请输入几次方"));
+  var array = [];
+  var result = 1;
+  for(var i = 0; i < n; i++) {
+    result = result * a;
+  }
+  console.log(result);
+
+</script>
+
+<script type="x" id="ch0105/14">
+  var person = Number(prompt("请输入人口基数"));  
+  var year = Number(prompt("请输入年数"));
+  var result = person;
+  for(var i = 0; i < year; i++) {
+    result = result * (1 + 0.001);
+  }
+  console.log(result.toFixed(4));
+
+</script>
+
+<script type="x" id="ch0105/15">
+  var R = Number(prompt("请输入年利率R"));  
+  var M = Number(prompt("请输入现有现金总数"));
+  var Y = Number(prompt("请输入存储年份"));
+  var result = M;
+  for(var i = 0; i < Y; i++) {
+    result = result * (1 + R * 0.01);
+  }
+  console.log(Math.floor(result));
+
+</script>
+
+<script type="x" id="ch0105/16">
+  var N = Number(prompt("请输入程序员年薪N"));  
+  var K = Number(prompt("请输入基数K"));
+  var horse = 200;
+  var store = 50;
+  var n = 20;
+  var i = 0;
+  for(i = 1; i <= n; i++) {
+    horse = horse * (1 + K * 0.01);
+    store += 50;
+    if(store > horse || store == horse) {
+      break;
+    } 
+  }
+  if (i > 20) {
+    console.log("Impossible");
+  } else {    
+    console.log(i + 1);
+  }
+
+</script>
+
+<script type="x" id="ch0105/17">
+  var K = Number(prompt("请输入第K个数"));
+  var result = 0;
+  var one = [K];
+  one[0] = 1;
+  one[1] = 1;
+  for(var i = 0; i < K; i++) {
+    one[i + 2] = one[i] + one[i + 1]; 
+  }
+  console.log(one[K-1]);
+
+</script>
+
+<script type="x" id="ch0105/18">
+  var n = Number(prompt("请输入n组测试数据"));
+  var number_sum = [];
+  var number_effect = [];
+  var result = [];
+  for(var i = 0; i < n; i++) {
+    number_sum[i] = Number(prompt("请输入该新疗法测试总数据"));
+    number_effect[i] = Number(prompt("请输入该疗法测试有效数据"));
+    result[i] = number_effect[i] / number_sum[i];
+    if (i >= 1) {
+      if(result[i] - result[0] > 0.05) {
+        console.log("better");
+      } else if (result[0] - result[i] > 0.05) {
+        console.log("worse");
+      } else {
+        console.log("same");
+      }
+    }
+  }
+
+</script>
