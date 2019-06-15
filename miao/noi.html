@@ -694,3 +694,36 @@
   }
 
 </script>
+
+<script type="x" id="ch0105/19">
+  var n = Number(prompt("请输入屋顶数目n"));
+  var coordinate_x = [];
+  var coordinate_y = [];
+  var person = [];
+  var time = [];
+  var time_sum = 0;
+  for(var i = 0; i < n; i++) {
+    coordinate_x[i] = Number(prompt("屋顶" + (i + 1) + "坐标x"));
+    coordinate_y[i] = Number(prompt("屋顶" + (i + 1) + "坐标y"));
+    person[i] = Number(prompt("屋顶" + (i + 1) + "被困人数"));
+    time[i] = Math.sqrt(coordinate_x[i] * coordinate_x[i] + coordinate_y[i] * coordinate_y[i]) / 50 * 2   
+    + 1.5 * person[i];
+    time_sum += time[i];    
+  }
+  console.log(Math.ceil(time_sum));
+
+  </script>
+
+<script type="x" id="ch0105/20">
+  var h = Number(prompt("请输入球的初始高度h"));
+  var height = [];
+  var distance = h;
+  var time_sum = 0;
+  for(var i = 0; i < 10; i++) {
+    height[i] = h / 2;
+    distance += height[i] * 2; 
+    h = h / 2;
+  }
+  console.log(distance - height[9]*2);
+  console.log(height[9]);
+  </script>
