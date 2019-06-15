@@ -419,3 +419,146 @@
     console.log(0);
 
 </script>
+
+<script type="x" id="ch0105/01">
+  var n = Number(prompt("请输入学生数目"));
+  var student = [];
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    student[i] = Number(prompt("输入第" + (i + 1) + "名学生的年龄")); 
+    sum += student[i];
+  }
+  var average = (sum / n).toFixed(2);
+  console.log(average);  
+
+</script>
+
+<script type="x" id="ch0105/02">
+  var month = [];
+  var sum = 0;
+  for(var i = 0; i < 12; i++) {
+    month[i] = Number(prompt("输入第" + (i + 1) + "个月的结余")); 
+    sum += month[i];
+  }
+  var average = (sum / 12).toFixed(2);
+  console.log("$" + average);  
+</script>
+
+<script type="x" id="ch0105/03">
+  var n = Number(prompt("请输入样本容量n"));
+  var one = [];
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    one[i] = Number(prompt("输入第" + (i + 1) + "个样本数据")); 
+    sum += one[i];
+  }
+  var average = (sum / n).toFixed(4);
+  console.log(average);  
+
+</script>
+
+<script type="x" id="ch0105/04">
+  var n = Number(prompt("请输入整数数量"));
+  var one = [];
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    one[i] = Number(prompt("输入第" + (i + 1) + "个数据")); 
+    sum += one[i];
+  }
+  var average = (sum / n).toFixed(5);
+  console.log(sum + " " + average);  
+
+</script>
+
+<script type="x" id="ch0105/05">
+  var n = Number(prompt("请输入考生数量"));
+  var one = [];
+  var max = 0;
+  for(var i = 0; i < n; i++) {
+    one[i] = Number(prompt("输入第" + (i + 1) + "个考生成绩")); 
+    if (max < one[i]) {
+      max = one[i];
+    }
+  }
+  console.log(max);  
+
+</script>
+
+<script type="x" id="ch0105/06">
+  var n = Number(prompt("请输入数量"));
+  var one = [];
+  var temp = 0;
+  var max = 0;
+  for(var i = 0; i < n; i++) {
+    one[i] = Number(prompt("输入第" + (i + 1) + "个考生成绩")); 
+    for(var j = 0; j < n; j++) {
+      max = Math.abs(one[i] - one[j]);
+      if (max > temp)
+      temp = max;
+    }
+  }
+  console.log(temp);  
+
+</script>
+
+<script type="x" id="ch0105/07">
+  var n = Number(prompt("请输入比赛天数"));
+  var gold = [];
+  var silver = [];
+  var copper = [];
+  var gold_sum = 0;
+  var silver_sum = 0;
+  var copper_sum = 0;
+  var sum = 0;
+  for(var i = 0; i < n; i++) {
+    gold[i] = Number(prompt("输入第" + (i + 1) + "天金牌数量")); 
+    silver[i] = Number(prompt("输入第" + (i + 1) + "天银牌数量")); 
+    copper[i] = Number(prompt("输入第" + (i + 1) + "天铜牌数量")); 
+    gold_sum += gold[i];
+    silver_sum += silver[i];
+    copper_sum += copper[i];
+    sum = gold_sum + silver_sum + copper_sum;
+  }
+  console.log(gold_sum + " " + silver_sum + " " + copper_sum + " " + sum);  
+
+</script>
+
+<script type="x" id="ch0105/08">
+  var n = Number(prompt("请输入几变形"));
+  var one = [];
+  var sum = (n - 2) * 180;  
+  var angle = 0;
+  for(var i = 0; i < n - 1; i++) {
+    one[i] = Number(prompt("输入第" + (i + 1) + "个已知角度")); 
+    angle += one[i];
+  }
+  angle = sum - angle;
+  console.log(angle);  
+
+</script>
+
+<script type="x" id="ch0105/09">
+  var min = Number(prompt("请输入第一个数"));
+  var max = Number(prompt("请输入第二个数"));
+  var sum = 0;
+  for(var i = min; i <= max; i++) {
+    if(i % 2 != 0) {
+      sum += i;
+    }
+  }
+  console.log(sum);  
+
+</script>
+
+<script type="x" id="ch0105/10">
+  var min = Number(prompt("请输入第一个数"));
+  var max = Number(prompt("请输入第二个数"));
+  var sum = 0;
+  for(var i = min; i <= max; i++) {
+    if(i % 17 == 0) {
+      sum += i;
+    }
+  }
+  console.log(sum);  
+
+</script>
