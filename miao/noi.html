@@ -826,3 +826,93 @@
     }
     
   </script>
+
+  <script type="x" id="ch0105/26">
+    var n = Number(prompt("请输入四位数个数n"));
+    var one = 0; // 每个四位数
+    var j = 0; // 符合条件的个数
+    for(var i = 0; i < n; i++) {
+      one = Number(prompt("请输入第" + (i + 1) + "个四位数"));
+      if (one % 10 > (Math.floor(one / 1000) + Math.floor(one / 100) % 10 + Math.floor(one / 10) % 10)) {
+        j++;
+      }
+    }  
+    console.log(j);
+  </script>
+  
+  <script type="x" id="ch0105/27">
+    var k = Number(prompt("请输入整数k"));
+    var Sn = 1;
+    var n = 0;
+    for(var i = 2; i < 1000; i++) {
+      Sn += 1 / i;
+      if (Sn > k) {
+        n = i;
+        break;
+      }
+    }  
+    console.log(n);
+  </script>
+  
+  <script type="x" id="ch0105/28">
+    var n = Number(prompt("请输入整数n"));
+    var divisor = 1;
+    for(var i = 0; ; i++) {    
+      console.log(Math.floor(n / divisor) % 10);
+      divisor *= 10;
+      if (Math.floor(n / divisor) < 1) {
+        break;
+      }
+    }
+  </script>
+  
+  <script type="x" id="ch0105/29">
+    var n = Number(prompt("请输入整数n"));
+    var divisor = 1;
+    if (Math.floor(n / divisor) % 10 == 0) {
+      n = Math.floor(n / 10);
+    }
+    if (n > 0) {
+      for (var i = 0; ; i++) {
+        console.log(Math.floor(n / divisor) % 10);
+        divisor *= 10;
+        if (Math.floor(n / divisor) < 1) {
+          break;
+        }
+      }
+    }
+    if (n < 0) {
+      console.log("-");
+      n = -n;
+      for (var i = 0; ; i++) {     
+        console.log(Math.floor(n / divisor) % 10);
+        divisor *= 10;
+        if (Math.floor(n / divisor) < 1) {
+          break;
+        }
+      }
+    }
+  </script>
+  
+  <script type="x" id="ch0105/30">
+    var m = Number(prompt("请输入正整数m"));
+    var k = Number(prompt("请输入正整数k"));
+    var divisor = 1; // 除数
+    var j = 0; // 含有几个3
+    if (m % 19 == 0) {
+      for (var i = 0; ; i++) {
+        if (Math.floor(m / divisor) % 10 == 3) {
+          j++;
+        } 
+        divisor *= 10;
+        if (Math.floor(m / divisor) < 1) {
+          break;
+        }
+      }
+      if (j == k) {
+        console.log("YES");
+      }
+    } else {
+      console.log("NO");
+    }
+  </script>
