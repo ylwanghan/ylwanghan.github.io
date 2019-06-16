@@ -916,3 +916,81 @@
       console.log("NO");
     }
   </script>
+
+  <script type="x" id="ch0105/31">
+    var n = Number(prompt("请输入正整数N"));
+    var m = Number(prompt("请输入正整数M"));
+    var light = [];
+    for (var l = 0; l < 5000; l++) {
+      light[l] = 1;
+    }
+    for (var i = 1; i <= m; i++) {
+      for(var j = 1; j <= n; j++) {
+        if (j % i == 0) {
+          light[j] = !light[j];
+        }
+      }
+    }
+    for (var i = 1; i <= n; i++) {
+      if (light[i] == 0) {
+        console.log(i + ",");
+      }
+    }
+  
+  </script>
+  
+  <script type="x" id="ch0105/32">
+    var n = Number(prompt("请输入正整数n"));
+    var p = 1;
+    var q = 2;
+    var temp = 0;
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      sum += q / p;
+      temp = q;
+      q = p + q;
+      p = temp;
+    }
+    console.log(sum.toFixed(4));
+  </script>
+  
+  <script type="x" id="ch0105/33">
+    var n = Number(prompt("请输入正整数n"));
+    var sum = 0;
+    for (var i = 1; i <= n; i++) {
+      if (i % 2 != 0) {
+        sum += 1 / i;
+      } else {
+        sum -= 1 / i;
+      }
+    }
+    console.log(sum.toFixed(4));
+  </script>
+  
+  <script type="x" id="ch0105/34">
+    var n = Number(prompt("请输入正整数n"));
+    var sum = 0;
+    var temp = 1;
+    for (var i = 1; i <= n; i++) {
+      for(var j = i; j > 1; j--) {
+        temp *= j;
+      }
+      sum += temp;
+      temp = 1;
+    }
+    console.log(sum);
+  </script>
+  
+  <script type="x" id="ch0105/35">
+    var n = Number(prompt("请输入正整数n"));
+    var e = 1;
+    var temp = 1;
+    for (var i = 1; i <= n; i++) {
+      for(var j = i; j > 1; j--) {
+        temp *= j;      
+      }
+      e += 1 / temp;
+      temp = 1;
+    }
+    console.log(e.toFixed(10));
+  </script>
