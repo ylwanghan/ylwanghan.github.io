@@ -1075,3 +1075,110 @@
   console.log(sum);
 
 </script>
+
+<script type="x" id="ch0105/41">
+  var l = Number(prompt("请输入正整数L"));
+  var r = Number(prompt("请输入正整数R"));
+  var sum = 0;
+  for (var i = l; i <= r; i++) {
+    if (i % 10 == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 10) == 2) {
+      sum++;
+    }
+    if (Math.floor(i / 100) == 2) {
+      sum++;
+    }
+    if (Math.floor(i / 1000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 10000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 100000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 1000000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 10000000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 100000000) == 2) {
+      sum++; 
+    }
+    if (Math.floor(i / 1000000000) == 2) {
+      sum++; 
+    }
+  }
+  console.log(sum);
+
+</script>
+
+<script type="x" id="ch0105/42">
+  var height = Number(prompt("请输入矩形高"));
+  var width = Number(prompt("请输入矩形宽"));
+  var gra = (prompt("请输入矩形符号"));
+  var heart = Number(prompt("请输入是否实心"));
+  
+
+</script>
+
+<script type="x" id="ch0105/43">
+  var n = Number(prompt("请输入正整数n"));
+  if (n % 2 == 0)
+    console.log(n / 2);
+  else {
+    var j = Math.floor(Math.sqrt(n)) + 1;
+    for (var i = j; i >= 3; i -= 2) {
+      if (n % i == 0) {
+        console.log(n / i);
+      }
+    }
+  }
+
+</script>
+
+<script type="x" id="ch0105/44">
+  var n = Number(prompt("请输入正整数n"));
+  var num = 2;
+  for (var i = 1; i < n; i++) {
+    num = nextPrime(num);
+  }
+  console.log(num);
+
+  function isPrime(n) {
+    var len = Math.ceil(Math.sqrt(n));
+    for (var i = 2; i <= len; i++) {
+      if (n % i == 0)
+        return false;
+    }
+    return true;
+  }
+  
+  function nextPrime(n) {
+    var x = n + 1;
+    while (!isPrime(x)) x++;
+    return x;
+  }
+
+</script>
+
+<script type="x" id="ch0105/45">
+  var n = Number(prompt("请输入天数n"));
+  var days = 0; // 已经过的天数
+  var sum = 0; // 当前金币总数
+  for (var i = 1; i <= n; i++)
+  {
+    for (var j = 1; j <= i; j++)
+    {
+      if (days >= n) 
+        break; 
+        sum += i;
+      days++; 
+    }
+  }
+  console.log(sum);
+
+</script>
