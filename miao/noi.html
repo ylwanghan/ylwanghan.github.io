@@ -744,9 +744,9 @@
 </script>
 
 <script type="x" id="ch0105/22">
-  var sum = 0; //总数
-  var res = 0; //手中的钱
-  var budget = 0; // 每月的预算
+  var sum = 0; 
+  var res = 0; 
+  var budget = 0; 
   var i = 0;
   for(i = 0; i < 12; i++) {
     budget = Number(prompt("请输入第" + (i + 1) + "个月的预算"));
@@ -768,9 +768,9 @@
 <script type="x" id="ch0105/23">
   var n = Number(prompt("请输入药品总量n"));
   var person = Number(prompt("请输入需要取药的病人数量"))
-  var res = 0; // 剩余药品数量
-  var one = 0; // 每个病人需要取走的数量
-  var j = 0; // 没有取到药品的人数
+  var res = 0; 
+  var one = 0; 
+  var j = 0; 
   res = n;
   for(var i = 0; i < person; i++) {
     one = Number(prompt("请输入第" + (i + 1) + "个病人希望取走的药品数量"));
@@ -786,11 +786,11 @@
 
 <script type="x" id="ch0105/24">
   var n = Number(prompt("请输入测量血压次数n"));
-  var res = 0; // 剩余药品数量
-  var high = 0; // 每个病人高压
-  var low = 0; // 每个病人低压
-  var normal = 0; // 血压连续正常的次数
-  var temp = 0; //临时的一个中间量
+  var res = 0; 
+  var high = 0; 
+  var low = 0; 
+  var normal = 0; 
+  var temp = 0; 
   for(var i = 0; i < n; i++) {
     high = Number(prompt("请输入第" + (i + 1) + "次高压值"));
     low = Number(prompt("请输入第" + (i + 1) + "次低压值"));
@@ -829,8 +829,8 @@
 
 <script type="x" id="ch0105/26">
   var n = Number(prompt("请输入四位数个数n"));
-  var one = 0; // 每个四位数
-  var j = 0; // 符合条件的个数
+  var one = 0; 
+  var j = 0; 
   for(var i = 0; i < n; i++) {
     one = Number(prompt("请输入第" + (i + 1) + "个四位数"));
     if (one % 10 > (Math.floor(one / 1000) + Math.floor(one / 100) % 10 + Math.floor(one / 10) % 10)) {
@@ -897,8 +897,8 @@
 <script type="x" id="ch0105/30">
   var m = Number(prompt("请输入正整数m"));
   var k = Number(prompt("请输入正整数k"));
-  var divisor = 1; // 除数
-  var j = 0; // 含有几个3
+  var divisor = 1; 
+  var j = 0; 
   if (m % 19 == 0) {
     for (var i = 0; ; i++) {
       if (Math.floor(m / divisor) % 10 == 3) {
@@ -1014,7 +1014,7 @@
   var m = Number(prompt("请输入体力最大值m"));
   var n = Number(prompt("请输入战斗天数n"));
   var x = Number(prompt("请输入能量元素总量x"));
-  var energy; // 消耗的能量元素
+  var energy;  
   while (x > 0) {
     energy = (m % n == 0) ? m / n : Math.ceil(m / n);
     if (energy > x) {
@@ -1167,8 +1167,8 @@
 
 <script type="x" id="ch0105/45">
   var n = Number(prompt("请输入天数n"));
-  var days = 0; // 已经过的天数
-  var sum = 0; // 当前金币总数
+  var days = 0; 
+  var sum = 0; 
   for (var i = 1; i <= n; i++)
   {
     for (var j = 1; j <= i; j++)
