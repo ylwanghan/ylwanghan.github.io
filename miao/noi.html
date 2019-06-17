@@ -1182,3 +1182,185 @@
   console.log(sum);
 
 </script>
+
+<script type="x" id="sort">
+    var a = Number(prompt("请输入正整数a"));
+    var b = Number(prompt("请输入正整数b"));
+    var c = Number(prompt("请输入正整数c"));
+    var temp = 0;
+    if (a > b) {
+      temp = a;
+      a = b;
+      b = temp;
+    }
+    if (a > c) {
+      temp = a;
+      c = a;
+      a = c;
+    }
+    if (b > c) {
+      temp = b;
+      b = c;
+      c = temp;
+    }
+    console.log(a + " " + b + " " + c);
+  
+  </script>
+  
+  <script type="x" id="narcissistic">
+    var n = Number(prompt("请输入正整数n"));
+    var sum = 0;
+    for (var i = 0; i < n.toString().length; i++) {
+      sum += Math.pow(parseInt(n.toString()[i]), n.toString().length);
+    }
+    if (sum == n) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  
+  </script>
+  
+  <script type="x" id="narcissistics">
+    for (var j = 100; j < 1000; j++) {
+      var n = j;
+      var sum = 0;
+      for (var i = 0; i < n.toString().length; i++) {
+        sum += Math.pow(parseInt(n.toString()[i]), n.toString().length);
+      }
+      if (sum == n) {
+        console.log(n);
+      }
+    }
+  
+  </script>
+  
+  <script type="x" id="palindrom">
+    var isPalindrome = function (x) {
+      if (x < 0) {
+        return false;
+      }
+      var intToStr = x.toString();
+      var nums = [];
+      for (var i = intToStr.length - 1; i >= 0; i--) {
+        nums.push(intToStr[i]);
+      }
+      var newNum = parseInt(nums.join(""));
+      if (newNum == x) {
+        return true;
+      } else {
+        return false;
+      }
+    };
+    var n = Number(prompt("请输入整数"));
+    console.log(isPalindrome(n));
+  </script>
+  
+  <script type="x" id="complete-number">
+    var isCompleteNumber = function (n) {
+      var sum = 0;
+      for (var i = 1; i < n; i++) {
+        if (n % i == 0) {
+          sum += i;
+        }
+      }
+      if (sum == n) {
+        console.log('YES');
+      }
+      else {
+        console.log('NO');
+      }
+    };
+    var n = Number(prompt("请输入整数"));
+    isCompleteNumber(n);
+  </script>
+  
+  <script type="x" id="complete-numbers">
+    var isCompleteNumber = function (n) {
+      var sum = 0;
+      for (var i = 1; i < n; i++) {
+        if (n % i == 0) {
+          sum += i;
+        }
+      }
+      if (sum == n) {
+        return true;
+      }
+      else {
+        return false;
+      }
+    };
+    for (var j = 0; j <= 1000; j++) {
+      if (isCompleteNumber(j)) {
+        console.log(j);
+      }
+    }
+  </script>
+  
+  <script type="x" id="prime">
+    var isPrime = function (n) {
+      if (n <= 3) {
+        return n > 1;
+      }
+      for (var i = 2; i < n; i++) {
+        if (n % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    };
+    var n = Number(prompt("请输入一个数"));
+    if (isPrime(n)) {
+      console.log('YES');
+    } else {
+      console.log('NO');
+    }
+  </script>
+  
+  <script type="x" id="primes">
+    var isPrime = function (n) {
+      if (n <= 3) {
+        return n > 1;
+      }
+      for (var i = 2; i < n; i++) {
+        if (n % i == 0) {
+          return false;
+        }
+      }
+      return true;
+    };
+    for (var i = 0; i <= 100; i++) {
+      if (isPrime(i)) {
+        console.log(i);
+      }
+    }
+  </script>
+  
+  <script type="x" id="itob">
+    
+  </script>
+  
+  <script type="x" id="lcf&lcm">
+    var a = Number(prompt("请输入整数a"));
+    var b = Number(prompt("请输入整数b"));
+    var gcd = 0;
+    var lcm = a * b;
+    while (a != b) {
+      if (a > b) { a -= b; }
+      else { b -= a; }
+    }
+    gcd = a;
+    lcm = lcm / gcd;
+    console.log(gcd + " " + lcm);
+  
+  </script>
+  
+  <script type="x" id="sqrt">
+    var a = Number(prompt("请输入整数a"));
+    if (a >= 0) {
+      console.log(Math.sqrt(a).toFixed(3));
+    } else {
+      console.log(-1);
+    }
+  
+  </script>
