@@ -1035,15 +1035,18 @@
 
 <script type="x" id="ch0105/38">
   var n = Number(prompt("请输入多项式的最高次幂n"));
+  var s = '';
   if (!n) {
     console.log(0);
   }
   for (var i = n; i >= 0; i--) {
-    var c = Number(prompt("请输入第" + (i + 1) + "项的系数"));
+    var c = Number(prompt("请输入第" + (n - i + 1) + "项的系数"));
     if (i != 0) {
-      console.log(c * i);
+      s += c * i + ' ';
+      //console.log(c * i);
     }
   }
+  console.log(s);
 </script>
 
 <script type="x" id="ch0105/39">
