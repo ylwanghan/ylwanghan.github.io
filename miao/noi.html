@@ -869,28 +869,34 @@
 <script type="x" id="ch0105/29">
   var n = Number(prompt("请输入整数n"));
   var divisor = 1;
+  var s = '';
   if (Math.floor(n / divisor) % 10 == 0) {
     n = Math.floor(n / 10);
   }
   if (n > 0) {
     for (var i = 0; ; i++) {
-      console.log(Math.floor(n / divisor) % 10);
+      s += Math.floor(n / divisor) % 10
+      //console.log(Math.floor(n / divisor) % 10);
       divisor *= 10;
       if (Math.floor(n / divisor) < 1) {
         break;
       }
     }
+    console.log(s);
   }
   if (n < 0) {
-    console.log("-");
+    s += '-'
+    //console.log("-");
     n = -n;
     for (var i = 0; ; i++) {
-      console.log(Math.floor(n / divisor) % 10);
+      s += Math.floor(n / divisor) % 10;
+      //console.log(Math.floor(n / divisor) % 10);
       divisor *= 10;
       if (Math.floor(n / divisor) < 1) {
         break;
       }
     }
+    console.log(s);
   }
 </script>
 
@@ -933,7 +939,7 @@
   }
   for (var i = 1; i <= n; i++) {
     if (light[i] == 0) {
-      console.log(i);
+      console.log(i +',');
     }
   }
 
