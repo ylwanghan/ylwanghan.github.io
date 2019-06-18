@@ -1119,8 +1119,37 @@
 <script type="x" id="ch0105/42">
   var height = Number(prompt("请输入矩形高"));
   var width = Number(prompt("请输入矩形宽"));
-  var gra = (prompt("请输入矩形符号"));
+  var s = (prompt("请输入矩形符号"));
+  var gra = '';
   var heart = Number(prompt("请输入是否实心"));
+  if (heart == 1) {
+    for (var i = 0; i < width; i++) {
+      gra += s;
+    }
+    for (var j = 0; j < height; j++) {
+      console.log(gra);
+    }
+  }
+  if (heart == 0) {
+    for (var i = 0; i < width; i++) {
+      gra += s;
+    }
+    console.log(gra);
+    gra = s;
+    for (var j = 0; j < width - 2; j++) {
+      gra += ' ';
+    }
+    gra += s;
+    for (var j = 0; j < height - 2; j++) {
+      console.log(gra);
+    }
+    gra = '';
+    for (var i = 0; i < width; i++) {
+      gra += s;
+    }
+    console.log(gra);
+
+  }
 
 
 </script>
