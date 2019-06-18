@@ -1315,6 +1315,72 @@
   }
 </script>
 
+<script type="x" id="weekday">
+  var year = Number(prompt("请输入年份"));
+  var month = Number(prompt("请输入月份"));
+  var year_base = 0;
+  var month_base = 0;
+  var weekday = 0;
+  if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+    year_base = 2;
+    if (month == 1)
+      month_base = 0;
+    if (month == 2)
+      month_base = 3;
+    if (month == 3)
+      month_base = 4;
+    if (month == 4)
+      month_base = 0;
+    if (month == 5)
+      month_base = 2;
+    if (month == 6)
+      month_base = 5;
+    if (month == 7)
+      month_base = 0;
+    if (month == 8)
+      month_base = 3;
+    if (month == 9)
+      month_base = 6;
+    if (month == 10)
+      month_base = 1;
+    if (month == 11)
+      month_base = 4;
+    if (month == 12)
+      month_base = 6;
+  } else {
+    year_base = 1;
+    if (month == 1)
+      month_base = 0;
+    if (month == 2)
+      month_base = 3;
+    if (month == 3)
+      month_base = 3;
+    if (month == 4)
+      month_base = 6;
+    if (month == 5)
+      month_base = 1;
+    if (month == 6)
+      month_base = 4;
+    if (month == 7)
+      month_base = 0;
+    if (month == 8)
+      month_base = 3;
+    if (month == 9)
+      month_base = 5;
+    if (month == 10)
+      month_base = 0;
+    if (month == 11)
+      month_base = 3;
+    if (month == 12)
+      month_base = 5;
+  }
+  weekday = parseInt(year + parseInt(year / 4) + parseInt(year / 400) - parseInt(year / 100) - year_base + month_base + 1) % 7;
+
+  //（年 + 年 / 4 + 年 / 400 - 年 / 100 - 年基数 + 月基数 + 日）/7＝……余星期几
+  console.log(weekday);
+
+</script>
+
 <script type="x" id="complete-number">
   var isCompleteNumber = function (n) {
     var sum = 0;
@@ -1416,8 +1482,7 @@
   }
   gcd = a;
   lcm = lcm / gcd;
-  console.log(gcd);
-  console.log(lcm);
+  console.log(gcd + " " + lcm);
 
 </script>
 
