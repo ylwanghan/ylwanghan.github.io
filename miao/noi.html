@@ -1325,13 +1325,13 @@
     var w = Math.floor(1 + 2 * m + 3 * (m + 1) / 5 + y + y / 4 - y / 100 + y / 400) % 7;
     if (y = 2019 && m == 11) {
       console.log(w + 1);
+    } else {
+      if (y = 2019 && m > 6) {
+        console.log(w);
+      } else {
+        console.log(w + 1);
+      }
     }
-    if (y >= 2019 && m > 6) {
-      console.log(w);
-    }
-    if{
-      console.log(w + 1);
-    } 
 </script>
 
 <script type="x" id="complete-number">
